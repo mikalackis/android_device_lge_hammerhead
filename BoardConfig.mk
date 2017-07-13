@@ -136,6 +136,10 @@ ifeq ($(USE_SVELTE_KERNEL),true)
 MALLOC_IMPL := dlmalloc
 endif
 
+BOARD_USES_ARIEL_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    hardware/ariel/arielhw
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
 
 # Enable Minikin text layout engine (will be the default soon)
